@@ -1,0 +1,68 @@
+meta(charset='utf-8')
+meta(content='IE=edge' http-equiv='X-UA-Compatible')
+meta(content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport')
+
+title= title
+
+meta(property='og:title' content=title)
+meta(property='og:type' content='website')
+
+if site.description
+  meta(name='description' content=site.description)
+  meta(property='og:description' content=site.description)
+
+if site.author
+  meta(name='author' content=site.author)
+
+if site.card
+  meta(property='og:image' content=site.host + '/img/' + site.card)
+  meta(property='og:image:type' content='image/png')
+  meta(property='og:image:width' content='628')
+  meta(property='og:image:height' content='1200')
+  meta(property='og:image:alt' content=site.alt)
+  meta(name='twitter:card' content='summary_large_image')
+  meta(name='twitter:image:alt' content=site.alt)
+
+if site.name
+  meta(property='og:site_name' content=site.name)
+
+if site.twitter
+  meta(name='twitter:site' content=site.twitter)
+  meta(name='twitter:creator' content=site.twitter)
+
+if site.favicon
+  link(rel='icon' type='image/svg+xml' href=site.host + '/img/favicon.svg')
+
+if site.gtag
+  script(async src='https://www.googletagmanager.com/gtag/js?id=' + site.gtag)
+  script.
+    var domains = ['#{site.domain}'];
+
+    if (domains.indexOf(document.domain) > -1) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '#{site.gtag}');
+    }
+
+if site.verification
+  meta(name='google-site-verification' content=site.verification)
+
+link(rel='stylesheet' href='/site.css')
+link(rel='stylesheet' href='/utilities.css')
+link(rel='stylesheet' href='/print.css')
+
+script(src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js")
+script.
+  document.addEventListener('DOMContentLoaded', function(event) {
+    hljs.configure({
+      languages: ['html', 'javascript', 'css', 'sass']
+    });
+
+    document.querySelectorAll('pre').forEach(function(pre) {
+      pre.setAttribute('tabindex', '0');
+
+      hljs.highlightBlock(pre);
+    });
+  });

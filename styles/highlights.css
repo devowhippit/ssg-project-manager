@@ -1,0 +1,8 @@
+/**
+ * Highlights
+ */
+
+ mark, ::selection {
+  color: var(--dh-color-background);
+  background-color: var(--dh-color-hyperlinks);
+}

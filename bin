@@ -1,0 +1,71 @@
+#!/bin/sh
+
+alias project='source pm/bin'
+
+_check() {
+  if [[ "$1" == "" ]]; then
+    echo "Specify a project as the second argument"
+
+    exit 0
+  fi
+}
+
+_start() {
+  _check $1
+
+  lume -s --src=$1/src --dest=$1/dist --config=$1/site.js
+}
+
+_tailwindcss() {
+  _check $1
+
+  npx tailwindcss -c pm/utilities.js -i $1/src/utilities.css -o $1/dist/utilities.css --minify
+}
+
+_pa11y() {
+  _check $1
+
+  npx pa11y-ci "$1/dist/**/*.html"
+}
+
+_publish() {
+  _check $1
+
+  cd $1
+
+  git checkout gh-pages
+  git checkout main -- dist
+
+  cp -R dist/* ./
+  rm -R dist/
+
+  git add --all
+  git commit -m 'Updated from main' -S
+  git push
+
+  git checkout main
+
+  cd ../
+}
+
+_optim() {
+  _check $1
+
+  open -a ImageOptim "$1/src/img"*
+
+  echo "Opening $1/src/img in ImageOptim"
+}
+
+_build() {
+  _check $1
+
+  lume --src=$1/src --dest=$1/dist --config=$1/site.js
+
+  _tailwindcss $1
+}
+
+alias start='_start'
+alias tailwindcss='_tailwindcss'
+alias optim='_optim'
+alias build='_build'
+alias publish='_publish'

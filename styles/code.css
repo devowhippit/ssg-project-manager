@@ -1,0 +1,50 @@
+/**
+ * Code
+ */
+
+code, pre, .hljs {
+  display: inline-block;
+}
+
+code, pre {
+  font-family: var(--dh-font-family-mono);
+  line-height: var(--dh-line-height-mono);
+
+  background-color: var(--dh-color-background-t1);
+}
+
+[class*='hljs-'] {
+  color: var(--dh-color-primary);
+}
+
+p code, li code, td code {
+  font-size: 80%;
+  font-family: inherit;
+
+  border-radius: 3px;
+  padding: 0.1em 0.4em 0.3em;
+  margin: 0;
+  display: inline;
+  white-space: nowrap;
+}
+
+td > code {
+  display: inline-block
+}
+
+pre, .hljs {
+  display: block;
+  border-radius: 3px;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: calc(var(--dh-grid) * 3);
+
+  margin-bottom: calc(var(--dh-grid) * 8);
+}
+
+@media screen and (min-width: 768px) {
+  pre, .hljs {
+    padding: calc(var(--dh-grid) * 6);
+  }
+}

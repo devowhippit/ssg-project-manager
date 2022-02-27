@@ -1,0 +1,51 @@
+/**
+ * Inputs
+ */
+
+input, button, select, textarea {
+  appearance: none;
+  -webkit-appearance: none;
+
+  border: none;
+  background: transparent;
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  cursor: pointer;
+}
+
+.opt, .btn, .select, .input {
+  display: inline-block;
+  margin-bottom: var(--dh-grid);
+}
+
+.opt:last-of-type,
+.btn:last-of-type,
+.select:last-of-type,
+.input:last-of-type {
+  margin-bottom: 0
+}
+
+.opt__base, .btn, .select select, .input input {
+  color: inherit;
+  border-color: var(--dh-input-border-color);
+  background-color: var(--dh-input-background);
+
+  font-size: var(--dh-input-font-size);
+  line-height: var(--dh-input-inner-size);
+
+  font-family: var(--dh-input-font-family);
+  font-weight: var(--dh-input-font-weight);
+  text-decoration: none;
+
+  display: inline-flex;
+  align-items: center;
+
+  padding: calc(calc(var(--dh-grid) * 2) - var(--dh-input-border-width)) calc(var(--dh-grid) * 2.5);
+  border: var(--dh-input-border-width) var(--dh-input-border-style);
+  border-radius: var(--dh-input-border-radius);
+
+  cursor: pointer;
+  user-select: none;
+}

@@ -1,0 +1,32 @@
+/**
+ * Options
+ */
+
+.opt__graphic {
+  color: inherit;
+  fill: transparent;
+  stroke: transparent;
+
+  stroke-width: var(--dh-input-stroke-width);
+  stroke-linecap: var(--dh-input-stroke-linecap);
+  stroke-linejoin: var(--dh-input-stroke-linejoin);
+  stroke-dasharray: var(--dh-input-stroke-dasharray);
+
+  width: var(--dh-input-inner-size);
+  height: var(--dh-input-inner-size);
+  margin-inline-end: var(--dh-grid);
+}
+
+input:hover + .opt__base {
+  border-color: var(--dh-color-focus);
+}
+
+input:checked + .opt__base {
+  color: inherit;
+}
+
+input:checked + .opt__base > .opt__graphic {
+  color: var(--dh-color-focus);
+  fill: var(--dh-color-focus);
+  stroke: var(--dh-input-background);
+}

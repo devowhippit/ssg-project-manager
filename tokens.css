@@ -1,0 +1,151 @@
+:root {
+  /**
+   * Spacing
+   */
+
+  --dh-grid: 8px;
+
+  --dh-space-0: 0px;
+  --dh-space-half: calc(var(--dh-grid) / 2);
+  --dh-space-1: var(--dh-grid);
+  --dh-space-2: calc(var(--dh-grid) * 2);
+  --dh-space-3: calc(var(--dh-grid) * 3);
+  --dh-space-4: calc(var(--dh-grid) * 4);
+  --dh-space-5: calc(var(--dh-grid) * 5);
+  --dh-space-6: calc(var(--dh-grid) * 6);
+  --dh-space-7: calc(var(--dh-grid) * 7);
+  --dh-space-8: calc(var(--dh-grid) * 8);
+
+  /**
+   * Media
+   */
+
+  --dh-screen-xlarge: 1441px;
+  --dh-screen-large: 1280px;
+  --dh-screen-desktop: 960px;
+  --dh-screen-tablet: 768px;
+  --dh-screen-mobile: 480px;
+  --dh-screen-small: 400px;
+  --dh-screen-xsmall: 300px;
+
+  /**
+   * Borders
+   */
+
+  --dh-border-0: 0px;
+  --dh-border-1: 1px;
+  --dh-border-2: 2px;
+  --dh-border-3: 3px;
+  --dh-border-4: 4px;
+  --dh-border-5: 5px;
+  --dh-border-6: 6px;
+  --dh-border-7: 7px;
+  --dh-border-8: 8px;
+
+  --dh-border-default: var(--dh-border-2);
+
+  /**
+   * Inputs (Text, Select, Options)
+   */
+
+  --dh-input-font-weight: 400;
+  --dh-input-font-size: 1em;
+
+  --dh-input-border-width: 2px;
+  --dh-input-border-radius: 2px;
+  --dh-input-border-style: solid;
+  --dh-input-stroke-width: 2px;
+  --dh-input-stroke-linecap: butt;
+  --dh-input-stroke-linejoin: round;
+  --dh-input-stroke-dasharray: 5 2;
+
+  --dh-input-border-color: inherit;
+
+  --dh-input-inner-size: 24px;
+  --dh-input-padding: calc(calc(var(--dh-grid) * 2) - var(--dh-input-border-width));
+
+  /**
+   * Focus
+   */
+
+  --dh-focus-width: 4px;
+  --dh-focus-gap: 1px;
+
+  /**
+   * Icons
+   */
+
+  --dh-icon-stroke: currentColor;
+  --dh-icon-stroke-width: 2;
+  --dh-icon-fill: none;
+
+  /**
+   * Fonts
+   */
+
+  --dh-font-size: 12px;
+  --dh-line-height: 1.6;
+  --dh-letter-spacing: 0;
+
+  --dh-font-webkit-smoothing: auto;
+  --dh-font-moz-smoothing: auto;
+
+  --dh-font-weight-normal: 400;
+  --dh-font-weight-bold: 700;
+
+  --dh-font-size-h1: 4em;
+  --dh-font-size-h2: 3.33em;
+  --dh-font-size-h3: 2em;
+  --dh-font-size-h4: 1.66em;
+  --dh-font-size-h5: 1.33em;
+  --dh-font-size-h6: 1em;
+
+  --dh-line-height-headings: 1.2;
+
+  --dh-line-height-mono: 1.8;
+
+  --dh-font-size-blockquote: 2.66em;
+  --dh-line-height-blockquote: 1.2;
+
+  --dh-font-size-small: 0.875em;
+
+  --dh-type-margin: calc(var(--dh-grid) * 4);
+}
+
+/**
+ * Responsive Font Sizing
+ */
+
+@media screen and (min-width: 480px) {
+  :root {
+    --dh-font-size: 14px
+  }
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --dh-font-size: 16px
+  }
+}
+
+@media screen and (min-width: 960px) {
+  :root {
+    --dh-font-size: 18px
+  }
+}
+
+/**
+ * Print
+ */
+
+:root {
+  --dh-print-main-width: 8.5in;
+}
+
+@media print {
+  :root {
+    --dh-font-size: 14px;
+    --dh-line-height: 1.5;
+    --dh-type-margin: 16px;
+  }
+}

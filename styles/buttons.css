@@ -1,0 +1,28 @@
+/**
+ * Buttons
+ */
+
+.btn {
+  color: var(--dh-button-color);
+  font-weight: var(--dh-button-font-weight);
+
+  background-color: var(--dh-button-background);
+  border-color: var(--dh-button-border);
+}
+
+.btn:hover {
+  color: var(--dh-button-color-hover);
+  background-color: var(--dh-button-background-hover);
+  border-color: var(--dh-button-background-hover);
+}
+
+.btn-primary {
+  color: var(--dh-button-primary-color);
+  background-color: var(--dh-button-primary-background);
+  border-color: var(--dh-button-primary-background);
+}
+
+.btn-primary:hover {
+  background-color: var(--dh-button-background-hover);
+  border-color: var(--dh-button-background-hover);
+}

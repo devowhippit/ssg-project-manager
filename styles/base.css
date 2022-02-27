@@ -1,0 +1,58 @@
+/* Tailwind.css requires this border box setting for its dimension based utilities */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: auto;
+  margin: 0;
+  min-height: 100%;
+  padding: 0;
+}
+
+*, :after, :before {
+  box-sizing: inherit
+}
+
+/* Tailwind.css requires this border setting for its borders to work properly */
+[class*='border'] {
+  border-style: solid;
+  border-width: 0
+}
+
+[hidden] {
+  display: none !important;
+}
+
+img, svg {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimizequality;
+}
+
+a {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+label {
+  display: inline-block;
+}
+
+fieldset, legend, dl, dt, dd {
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+svg, a > *, button > *, use {
+  pointer-events: none;
+}
+
+iframe {
+  border: none;
+}

@@ -1,0 +1,11 @@
+/**
+ * Icons
+ */
+
+.icon {
+  width: var(--dh-space-3);
+  height: var(--dh-space-3);
+  stroke: var(--dh-icon-stroke);
+  stroke-width: var(--dh-icon-stroke-width);
+  fill: var(--dh-icon-fill);
+}

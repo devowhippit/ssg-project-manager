@@ -1,0 +1,18 @@
+/**
+ * Body
+ */
+
+body {
+  color: var(--dh-color-text);
+  background: var(--dh-color-background);
+
+  font-family: var(--dh-font-family);
+  font-feature-settings: var(--dh-font-features);
+  font-size: var(--dh-font-size);
+  font-weight: var(--dh-font-weight-normal);
+  line-height: var(--dh-line-height);
+  letter-spacing: var(--dh-letter-spacing);
+
+  -webkit-font-smoothing: var(--dh-font-webkit-smoothing);
+  -moz-osx-font-smoothing: var(--dh-font-moz-smoothing);
+}

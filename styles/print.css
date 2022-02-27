@@ -1,0 +1,35 @@
+/**
+ * Print Styles
+ */
+
+@page {
+  margin: 0.6in 0.75in !important;
+}
+
+@media print {
+  :root {
+    --dh-font-size: 14px;
+    --dh-type-margin: 20px;
+  }
+
+  main {
+    width: var(--dh-print-main-width);
+    padding: 0 !important;
+  }
+
+  footer {
+    display: none !important
+  }
+
+  .print\:hidden {
+    display: none !important
+  }
+
+  .print\:p-0 {
+    padding: 0 !important
+  }
+
+  .print\:grid {
+    display: grid !important
+  }
+}

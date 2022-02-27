@@ -1,0 +1,11 @@
+/**
+ * Dividers
+ */
+
+ hr {
+  border: none;
+  border-bottom: var(--dh-border-default) solid var(--dh-color-background-t1);
+
+  margin-top: var(--dh-type-margin);
+  margin-bottom: var(--dh-type-margin);
+}

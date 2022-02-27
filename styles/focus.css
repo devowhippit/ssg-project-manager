@@ -1,0 +1,13 @@
+/**
+ * Focus
+ */
+
+a:focus,
+.btn:focus,
+.input input:focus,
+.select select:focus,
+input:focus + .opt__base {
+   outline: none;
+   box-shadow: 0 0 0 var(--dh-focus-gap) var(--dh-color-background),
+               0 0 0 var(--dh-focus-width) var(--dh-color-focus);
+}

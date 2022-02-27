@@ -1,0 +1,98 @@
+/**
+ * Typography
+ */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--dh-font-family-headings);
+  font-weight: var(--dh-font-weight-headings);
+  line-height: var(--dh-line-height-headings);
+
+  margin-top: calc(var(--dh-type-margin) * 1.5);
+  margin-bottom: var(--dh-type-margin);
+
+  display: flex;
+  align-items: center;
+
+  page-break-after: avoid;
+}
+
+h1, .h1 {
+  font-family: var(--dh-font-family-secondary);
+  font-weight: var(--dh-font-weight-normal);
+  font-size: var(--dh-font-size-h1);
+  font-feature-settings: var(--dh-font-features-secondary);
+}
+
+h2, .h2 {
+  font-family: var(--dh-font-family-secondary);
+  font-weight: var(--dh-font-weight-normal);
+  font-size: var(--dh-font-size-h2);
+  font-feature-settings: var(--dh-font-features-secondary);
+  /* page-break-before: always; */
+}
+
+h3, .h3 {
+  font-size: var(--dh-font-size-h3);
+}
+
+h4, .h4 {
+  font-size: var(--dh-font-size-h4);
+}
+
+h5, .h5 {
+  font-size: var(--dh-font-size-h5);
+  font-weight: var(--dh-font-weight-bold);
+}
+
+h6, .h6 {
+  font-size: var(--dh-font-size-h6);
+  font-weight: var(--dh-font-weight-bold);
+}
+
+blockquote, .blockquote {
+  font-family: var(--dh-font-family-blockquote);
+  font-feature-settings: var(--dh-font-features-secondary);
+  font-size: var(--dh-font-size-blockquote);
+  line-height: var(--dh-line-height-blockquote);
+
+  margin-top: 0;
+  margin-block-start: var(--dh-space-8);
+  margin-block-end: var(--dh-space-8);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  blockquote, .blockquote {
+    border-width: 0;
+    border-style: solid;
+    border-inline-start-width: 4px;
+    padding-inline-start: var(--dh-space-4);
+  }
+}
+
+small, .small {
+  font-size: var(--dh-font-size-small);
+}
+
+p, ul, ol, .question {
+  margin-top: 0px;
+  margin-bottom: var(--dh-type-margin);
+}
+
+ul, ol {
+  padding-inline-start: calc(var(--dh-grid) * 3);
+}
+
+li {
+  margin-bottom: calc(var(--dh-type-margin) * .5);
+}
+
+li > ul, li > ul:first-child {
+  margin-top: calc(var(--dh-type-margin) * .5);
+}
+
+p {
+  font-family: var(--dh-font-family-body);
+}

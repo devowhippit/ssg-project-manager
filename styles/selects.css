@@ -1,0 +1,31 @@
+/**
+ * Selects
+ */
+
+.select {
+  position: relative;
+}
+
+.select select {
+  padding-inline-end: calc(
+    calc(var(--dh-grid) * 2.5) + var(--dh-input-inner-size) + var(--dh-grid)
+  );
+}
+
+.select__graphic {
+  width: var(--dh-input-inner-size);
+  height: var(--dh-input-inner-size);
+  top: 50%;
+  margin-top: calc(var(--dh-input-inner-size) / 2 * -1);
+  position: absolute;
+  right: calc(var(--dh-grid) * 2.5);
+  inset-inline-end: calc(var(--dh-grid) * 2.5);
+
+  stroke-width: var(--dh-input-stroke-width);
+  stroke-linecap: var(--dh-input-stroke-linecap);
+  stroke-linejoin: var(--dh-input-stroke-linejoin);
+}
+
+.select select:hover {
+  border-color: var(--dh-color-focus);
+}

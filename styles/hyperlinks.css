@@ -1,0 +1,14 @@
+/**
+ * Hyperlinks
+ */
+
+ a:not(.btn) {
+  color: var(--dh-color-hyperlinks);
+  font-weight: var(--dh-font-weight-hyperlinks);
+  text-decoration-color: var(--dh-color-hyperlinks);
+}
+
+a:not(.btn):hover {
+  color: var(--dh-color-text);
+  text-decoration-color: var(--dh-color-hyperlinks);
+}

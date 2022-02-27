@@ -1,0 +1,9 @@
+/**
+ * Animate
+ */
+
+a, input, textarea, select, .btn, [class*='hover:'], .opt__base {
+  transition-property: opacity, background, color, text-decoration-color, border, box-shadow, outline, transform, stroke, stroke-dashoffset, fill;
+  transition-duration: 0.25s;
+  backface-visibility: hidden;
+}
