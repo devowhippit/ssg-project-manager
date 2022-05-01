@@ -66,6 +66,7 @@ _build() {
 
 alias start='_start'
 alias tailwindcss='_tailwindcss'
+alias pa11y='_pa11y'
 alias optim='_optim'
 alias build='_build'
 alias publish='_publish'

@@ -11,5 +11,5 @@ table {
 th, td {
   padding: var(--dh-space-1) var(--dh-space-2);
   background-color: var(--dh-color-background-t1);
-  border-bottom: solid 1px var(--dh-color-background);
+  border-bottom: var(--dh-border-default) solid var(--dh-color-background);
 }

@@ -1,0 +1,17 @@
+.dl {
+  display: grid;
+  grid-template-columns: clamp(8rem, 33.33%, 16rem) 1fr;
+  margin-bottom: calc(var(--dh-grid) * 8);
+}
+
+.dl dt, .dl dd {
+  padding: var(--dh-space-1) var(--dh-space-1);
+}
+
+.dl {
+  border-top: var(--dh-border-default) solid var(--dh-color-background-t1);
+}
+
+.dl dt, .dl dd {
+  border-bottom: var(--dh-border-default) solid var(--dh-color-background-t1);
+}
