@@ -33,6 +33,8 @@ _publish() {
 
   cd $1
 
+  git stash
+
   git checkout gh-pages
   git checkout main -- dist
 
@@ -44,6 +46,8 @@ _publish() {
   git push
 
   git checkout main
+
+  git stash pop
 
   cd ../
 }
